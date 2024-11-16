@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--liste non ordonnée
+    
+    En HTML, une liste non ordonnée est utilisée pour créer une liste d'éléments sans ordre particulier.
+     Elle est généralement utilisée pour présenter des éléments de manière simple et claire, sans impliquer une hiérarchie ou une séquence.
+    
+    -->
+    <ul>
+        <li>liste à puce 1</li>
+        <li>liste à puce 2</li>
+        <li>liste à puce 3</li>
+    </ul>
+    <!--liste ordonnée-->
+    <ol>
+        <li>liste à puce 1</li>
+        <li>liste à puce 2</li>
+        <li>liste à puce 3</li>
+    </ol>
+
+        <!--La balise <ol> en HTML est utilisée pour créer une liste ordonnée.
+         Si tu souhaites inverser l'ordre des éléments dans cette liste,
+          tu peux utiliser l'attribut reversed. Voici un exemple :
+          L'attribut reversed indique que la numérotation doit commencer par le nombre le plus élevé et descendre.
+           Cela peut être utile dans
+         des contextes où l'on veut montrer un compte à rebours ou une progression inversée.
+          
+          --> 
+
+    <ol reversed>
+        <li>Troisième élément</li>
+        <li>Deuxième élément</li>
+        <li>Premier élément</li>
+    </ol>
+
+    <!--
+    La balise <ol> en HTML permet également d'utiliser l'attribut start pour définir
+     le nombre à partir duquel la numérotation de la liste commence. Voici un exemple :
+    L'attribut start="5" indique que la numérotation commence à 5. Cela peut être utile
+     si tu veux personnaliser la numérotation des éléments de ta liste.
+    -->
+    <ol start="5">
+        <li>Premier élément</li>
+        <li>Deuxième élément</li>
+        <li>Troisième élément</li>
+    </ol>
+
+   <!-- 
+    La balise <ol> en HTML permet également d'utiliser l'attribut
+     type pour spécifier le style de numérotation. Voici les valeurs possibles pour l'attribut type :
+
+1 : chiffres (1, 2, 3, ...)
+A : lettres majuscules (A, B, C, ...)
+a : lettres minuscules (a, b, c, ...)
+I : chiffres romains majuscules (I, II, III, ...)
+i : chiffres romains minuscules (i, ii, iii, ...) 
+
+Tu peux changer la valeur de type pour obtenir le style de numérotation souhaité.
+   -->
+
+<ol type="A">
+    <li>Premier élément</li>
+    <li>Deuxième élément</li>
+    <li>Troisième élément</li>
+</ol>
+
+<ol type="I">
+    <li>Premier élément</li>
+    <li>Deuxième élément</li>
+    <li>Troisième élément</li>
+</ol>
+
+<!-- 
+    sous-liste
+
+    En HTML, vous pouvez créer des sous-listes (ou listes imbriquées)
+     en plaçant une nouvelle liste à l'intérieur d'une liste existante.
+     Cela permet de structurer vos données de manière hiérarchique.
+
+-->
+
+<ul>
+        <li>Élément 1
+            <ul>
+                <li>Sous-élément 1.1</li>
+                <li>Sous-élément 1.2</li>
+            </ul>
+        </li>
+        <li>Élément 2
+            <ul>
+                <li>Sous-élément 2.1</li>
+                <li>Sous-élément 2.2</li>
+            </ul>
+        </li>
+        <li>Élément 3</li>
+  </ul>
+  
+
+</body>
+</html>

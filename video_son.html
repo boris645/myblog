@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- En HTML, tu peux facilement intégrer des sons et des vidéos à l'aide
+      des éléments <audio> et <video>. Voici un aperçu de chacun :
+        Intégrer des sons avec <audio>
+        L'élément <audio> te permet d'ajouter des fichiers audio à ta page.
+        controls : ajoute des contrôles de lecture (play, pause, volume).
+        source : tu peux spécifier plusieurs formats pour assurer la compatibilité avec différents navigateurs.-->
+
+            <audio controls>
+                <source src="chemin/vers/ton_fichier.mp3" type="audio/mpeg">
+                <source src="chemin/vers/ton_fichier.ogg" type="audio/ogg">
+                Votre navigateur ne supporte pas l'élément audio.
+              </audio>
+              
+              <!-- Intégrer des vidéos avec <video>
+                Pour les vidéos, l'élément <video> fonctionne de manière similaire : -->
+
+                    <video width="640" height="360" controls>
+                        <source src="chemin/vers/ton_fichier.mp4" type="video/mp4">
+                        <source src="chemin/vers/ton_fichier.ogg" type="video/ogg">
+                        Votre navigateur ne supporte pas l'élément vidéo.
+                    </video>
+
+                    <!-- width et height : définissent les dimensions de la vidéo.
+                    controls : ajoute des contrôles de lecture pour l'utilisateur.
+                    Attributs supplémentaires
+                    Pour les deux éléments, tu peux utiliser des attributs comme :
+
+                    autoplay : commence la lecture automatiquement (attention à l'expérience utilisateur).
+                    loop : fait en sorte que la lecture redémarre automatiquement à la fin.
+                    muted : démarre le son en mode silencieux. -->
+        
+
+</html>

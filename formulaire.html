@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale="1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- 
+    En HTML, un formulaire peut utiliser deux méthodes principales pour envoyer des données au serveur :
+     GET et POST. Voici un aperçu des deux méthodes, ainsi que des détails sur chacune d'elles :
+
+        1. Méthode GET
+        Description : Envoie les données dans l'URL en tant que paramètres de requête.
+        Utilisation : Principalement utilisée pour les requêtes de récupération de données, comme des recherches ou des filtres.
+        Caractéristiques :
+        Les données sont visibles dans l'URL.
+        Limite de longueur d'URL (généralement environ 2000 caractères).
+        Idéale pour les opérations sans effet secondaire (c'est-à-dire qui ne modifient pas les données sur le serveur).
+        Les résultats peuvent être mis en cache, ce qui peut améliorer les performances pour les recherches fréquentes.
+    
+    -->
+
+    <form action="/search" method="GET">
+        <label for="query">Recherche :</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <!-- 
+
+            2. Méthode POST
+        Description : Envoie les données dans le corps de la requête, ce qui les rend invisibles dans l'URL.
+        Utilisation : Principalement utilisée pour soumettre des données qui modifient le serveur, comme les enregistrements,
+        les mises à jour ou les suppressions.
+        Caractéristiques :
+        Les données ne sont pas visibles dans l'URL, ce qui les rend plus sécurisées pour les informations sensibles.
+        Pas de limite stricte sur la taille des données (bien que les serveurs puissent imposer leurs propres limites).
+        Les résultats ne sont généralement pas mis en cache.
+    
+    -->
+
+    <form action="/submit" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Envoyer</button>
+    </form>
+    
+
+    <!-- 
+            Comparaison Résumée
+        Critère	                GET	                                            POST
+        Visibilité	            Données dans l'URL	                            Données dans le corps de la requête
+        Sécurité	            Moins sécurisé	                                Plus sécurisé
+        Limite de données       Limité par la longueur de l'URL	                Pas de limite stricte
+        Utilisation	            Récupération de données	                        Envoi de données sensibles ou modifiantes
+
+    
+                    Conclusion
+            Le choix entre GET et POST dépend de la nature de l'opération que vous souhaitez effectuer et des données que vous devez envoyer.
+            Pour des recherches et des opérations sans effets secondaires, GET est souvent approprié,
+            tandis que pour les soumissions de formulaires qui modifient des données, POST est généralement le meilleur choix.
+    
+    -->
+
+    <!-- 
+                Attributs de la balise <form>
+            action :
+
+            Définit l'URL vers laquelle les données du formulaire seront envoyées lors de la soumission.
+            Exemple : action="/submit"
+            method :
+
+            Indique la méthode d'envoi des données. Les valeurs possibles sont :
+            GET : Les données sont ajoutées à l'URL.
+            POST : Les données sont envoyées dans le corps de la requête.
+            Exemple : method="POST"
+            enctype :
+
+            Spécifie le type d'encodage utilisé lors de l'envoi des données (principalement utilisé avec POST). Les valeurs communes incluent :
+            application/x-www-form-urlencoded : Valeur par défaut.
+            multipart/form-data : Utilisé pour envoyer des fichiers.
+            text/plain : Les données sont envoyées en texte brut.
+            Exemple : enctype="multipart/form-data"
+            target :
+
+            Définit où afficher la réponse après la soumission du formulaire. Les valeurs possibles incluent :
+            _self : Ouvre dans la même fenêtre (valeur par défaut).
+            _blank : Ouvre dans une nouvelle fenêtre ou un nouvel onglet.
+            _parent : Ouvre dans le cadre parent.
+            _top : Ouvre dans toute la fenêtre.
+            Exemple : target="_blank"
+            autocomplete :
+
+            Indique si le navigateur doit automatiquement remplir les champs du formulaire. Les valeurs possibles sont :
+            on : L'auto-complétion est activée.
+            off : L'auto-complétion est désactivée.
+            Exemple : autocomplete="off"
+            novalidate :
+
+            Indique que le formulaire ne doit pas être validé par le navigateur lors de la soumission. Cela désactive la validation des champs obligatoires.
+            Exemple : novalidate
+            name :
+
+            Définit un nom pour le formulaire, utile pour la gestion par JavaScript ou pour l'identification sur le serveur.
+            Exemple : name="contactForm"
+    
+    
+    
+    -->
+
+    <form action="/submit" method="POST" enctype="multipart/form-data" target="_self" autocomplete="off" novalidate name="contactForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Envoyer</button>
+    </form>
+
+
+
+
+
+
+
+    <!-- 
+    
+            Structure d'un Formulaire HTML
+        Voici les principaux éléments d'un formulaire en HTML :
+
+        <form> : La balise principale qui encapsule tous les éléments du formulaire.
+        <input> : Utilisée pour créer différents types de champs (texte, mot de passe, cases à cocher, etc.).
+        <textarea> : Un champ de texte multi-lignes pour des entrées plus longues.
+        <select> : Un menu déroulant permettant de sélectionner une option.
+        <button> : Un bouton qui peut être utilisé pour soumettre le formulaire.
+            
+    -->
+
+    1. <input>
+Type text : Champ de saisie pour des textes courts.
+
+html
+
+<input type="text" name="username" required>
+Type password : Champ de saisie pour des mots de passe, masquant les caractères.
+
+html
+
+<input type="password" name="password" required>
+Type email : Champ de saisie pour des adresses e-mail, avec validation intégrée.
+
+html
+
+<input type="email" name="email" required>
+Type number : Champ de saisie pour des nombres, avec possibilité de définir des valeurs minimales et maximales.
+
+html
+
+<input type="number" name="age" min="1" max="100" required>
+Type date : Champ de saisie pour des dates, avec un sélecteur de date dans certains navigateurs.
+
+html
+
+<input type="date" name="birthday" required>
+Type checkbox : Case à cocher pour des options binaires.
+
+html
+
+<input type="checkbox" name="subscribe" value="yes"> S'abonner à la newsletter
+Type radio : Boutons radio pour sélectionner une option parmi plusieurs.
+
+html
+
+<input type="radio" name="gender" value="male"> Homme
+<input type="radio" name="gender" value="female"> Femme
+Type file : Champ pour télécharger des fichiers.
+
+html
+
+<input type="file" name="fileUpload">
+2. <textarea>
+<!-- Utilisé pour des saisies de texte multi-lignes -->
+html
+
+<textarea name="message" rows="4" cols="50" required></textarea>
+3. <select>
+<!--Menu déroulant permettant de sélectionner une option parmi plusieurs. -->
+html
+
+<select name="country">
+    <option value="france">France</option>
+    <option value="usa">États-Unis</option>
+    <option value="canada">Canada</option>
+</select>
+4. <button>
+ <!-- Bouton qui peut être utilisé pour soumettre le formulaire ou pour d'autres actions. --> 
+html
+
+<button type="submit">Envoyer</button>
+
+
+
+<!-- 
+Exemple Complet de Formulaire
+Voici un exemple complet intégrant différents types de champs :
+
+-->
+
+    <h1>Formulaire d'Inscription</h1>
+<form action="/submit" method="POST">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="age">Âge :</label>
+    <input type="number" id="age" name="age" min="1" max="100" required><br><br>
+
+    <label for="birthday">Date de naissance :</label>
+    <input type="date" id="birthday" name="birthday" required><br><br>
+
+    <label for="subscribe">
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes"> S'abonner à la newsletter
+    </label><br><br>
+
+    <label>Genre :</label>
+    <input type="radio" name="gender" value="male"> Homme
+    <input type="radio" name="gender" value="female"> Femme<br><br>
+
+    <label for="fileUpload">Télécharger un fichier :</label>
+    <input type="file" id="fileUpload" name="fileUpload"><br><br>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+    <label for="country">Pays :</label>
+    <select id="country" name="country">
+        <option value="france">France</option>
+        <option value="usa">États-Unis</option>
+        <option value="canada">Canada</option>
+    </select><br><br>
+
+    <button type="submit">Envoyer</button>
+</form>
+    
+</body>
+</html>

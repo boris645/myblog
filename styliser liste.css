@@ -1,0 +1,213 @@
+/*
+Cours Complet sur la Stylisation des Listes en CSS
+Les listes sont des éléments HTML courants qui peuvent être stylisés de différentes manières pour améliorer l'apparence visuelle d'un site web.
+ Ce cours vous guidera à travers les types de listes, leurs styles par défaut, et comment les personnaliser avec CSS.
+*/
+
+/*
+1. Types de Listes en HTML
+Il existe deux principaux types de listes en HTML :
+
+Listes ordonnées (<ol>) : Utilisées pour les éléments qui ont un ordre spécifique.
+Listes non ordonnées (<ul>) : Utilisées pour les éléments qui n'ont pas d'ordre particulier.
+Chaque élément de liste est défini par une balise <li>.
+
+
+
+
+Exemple de listes HTML :
+*/
+
+<h2>Liste Ordonnée</h2>
+<ol>
+    <li>Premier élément</li>
+    <li>Deuxième élément</li>
+    <li>Troisième élément</li>
+</ol>
+
+<h2>Liste Non Ordonnée</h2>
+<ul>
+    <li>Élément A</li>
+    <li>Élément B</li>
+    <li>Élément C</li>
+</ul>
+
+
+/*
+2. Stylisation de Base des Listes
+Les listes ont des styles par défaut que vous pouvez modifier à l'aide de CSS. Voici quelques propriétés que vous pouvez utiliser pour styliser les listes.
+
+2.1. Couleur et Taille du Texte
+Vous pouvez changer la couleur et la taille du texte dans les listes.
+
+*/
+
+ul, ol {
+    color: #333; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte */
+}
+
+/*
+2.2. Liste à Puces
+Pour les listes non ordonnées, vous pouvez modifier le style des puces à l'aide de la propriété list-style-type.
+
+
+
+Les valeurs possibles incluent :
+
+disc (par défaut)
+circle
+square
+none (pas de puces)
+*/
+
+ul {
+    list-style-type: square; /* Modifie les puces en carrés */
+}
+
+/*
+
+2.3. Numérotation des Listes Ordonnées
+Pour les listes ordonnées, vous pouvez également modifier le style de numérotation.
+
+
+
+Les valeurs possibles incluent :
+
+1 (chiffres)
+A (lettres majuscules)
+a (lettres minuscules)
+I (chiffres romains majuscules)
+i (chiffres romains minuscules)
+
+*/
+
+ol {
+    list-style-type: upper-alpha; /* Numérotation avec des lettres majuscules */
+}
+
+/*
+3. Marges et Espacements
+Vous pouvez contrôler les marges et l'espacement des listes pour améliorer la mise en page.
+*/
+
+ul, ol {
+    margin: 20px; /* Marge autour des listes */
+    padding: 10px; /* Espacement à l'intérieur des listes */
+}
+
+/*
+4. Stylisation des Éléments de Liste
+Vous pouvez également styliser chaque élément de liste individuellement.
+*/
+
+li {
+    margin-bottom: 10px; /* Espace entre les éléments de liste */
+    padding: 5px; /* Espacement à l'intérieur de chaque élément */
+    background-color: #f9f9f9; /* Couleur de fond des éléments */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/*
+
+5. Exemples Pratiques
+Voici un exemple complet de stylisation des listes avec HTML et CSS.
+
+5.1. HTML
+
+*/
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylisation des Listes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Stylisation des Listes en CSS</h1>
+
+    <h2>Liste Ordonnée</h2>
+    <ol>
+        <li>Premier élément</li>
+        <li>Deuxième élément</li>
+        <li>Troisième élément</li>
+    </ol>
+
+    <h2>Liste Non Ordonnée</h2>
+    <ul>
+        <li>Élément A</li>
+        <li>Élément B</li>
+        <li>Élément C</li>
+    </ul>
+</body>
+</html>
+
+/*
+5.2. CSS (styles.css)
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #4CAF50; /* Vert */
+}
+
+ul, ol {
+    color: #333; /* Couleur du texte */
+    font-size: 16px; /* Taille du texte */
+    margin: 20px; /* Marge autour des listes */
+    padding: 10px; /* Espacement à l'intérieur des listes */
+}
+
+ul {
+    list-style-type: square; /* Style des puces */
+}
+
+ol {
+    list-style-type: upper-alpha; /* Style de numérotation */
+}
+
+li {
+    margin-bottom: 10px; /* Espace entre les éléments */
+    padding: 5px; /* Espacement à l'intérieur de chaque élément */
+    background-color: #f9f9f9; /* Couleur de fond */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/*
+6. Listes Imbriquées
+Vous pouvez également imbriquer des listes pour créer des sous-listes. Stylisez-les comme n'importe quelle autre liste.
+
+*/
+
+<ul>
+    <li>Élément 1
+        <ul>
+            <li>Sous-élément 1.1</li>
+            <li>Sous-élément 1.2</li>
+        </ul>
+    </li>
+    <li>Élément 2</li>
+</ul>
+
+ul ul {
+    list-style-type: circle; /* Modifie les puces des sous-listes */
+    margin-left: 20px; /* Ajoute une marge à gauche pour indenté */
+}
+
+/*
+7. Accessibilité
+Assurez-vous que vos listes sont accessibles :
+
+Utilisez des listes pour des éléments qui ont un sens de liste.
+Ne modifiez pas trop le style des listes à tel point qu'elles deviennent illisibles.
+
+*/
+
+
+
+

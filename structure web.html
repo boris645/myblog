@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- La structure d'une page web en HTML repose sur des éléments fondamentaux
+    qui définissent son contenu et sa présentation. Voici les principales parties d'une structure HTML typique :-->
+
+    <!-- 1. Déclaration du Doctype
+    Au début du document, on trouve la déclaration du Doctype, qui informe le navigateur du type de document. Pour HTML5, c'est : -->
+
+    <!DOCTYPE html>
+
+    <!-- 2. Élément <html>
+    C'est l'élément racine qui englobe tout le contenu de la page. -->
+
+    <html lang="fr">
+
+    <!-- 3. Élément <head>
+    Cette section contient des métadonnées sur le document, telles que le titre, les liens vers les feuilles de style,
+    et d'autres informations non affichées directement à l'utilisateur. -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Site Web</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <!-- 4. Élément <body>
+        C'est ici que se trouve le contenu visible de la page, comme les textes, images, vidéos, et autres éléments. -->
+
+        <body>
+            <header>
+                <h1>Bienvenue sur mon site</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <main>
+                <section id="accueil">
+                    <h2>Accueil</h2>
+                    <p>Voici la section d'accueil.</p>
+                </section>
+                <section id="services">
+                    <h2>Nos Services</h2>
+                    <p>Description de nos services.</p>
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2024 Mon Site Web</p>
+            </footer>
+        </body>
+
+        <!-- 5. Éléments de structure
+            <header> : En-tête de la page.
+            <nav> : Menu de navigation.
+            <main> : Contenu principal de la page.
+            <section> : Sections distinctes du contenu.
+            <footer> : Pied de page. -->
+
+        <!-- Exemple complet Voici un exemple complet d'une page HTML simple : -->
+
+        <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon site</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="accueil">
+            <h2>Accueil</h2>
+            <p>Voici la section d'accueil.</p>
+        </section>
+        <section id="services">
+            <h2>Nos Services</h2>
+            <p>Description de nos services.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mon Site Web</p>
+    </footer>
+</body>
+</html>
+
+<!-- Le <div> (division) est un conteneur générique utilisé pour regrouper des éléments et appliquer des styles ou des comportements à ces groupes.
+     Contrairement à des éléments sémantiques comme
+     <header>, <nav>, ou <footer>, un <div> ne porte pas de signification spécifique, mais est utile -->
+
+        <!-- Exemple de structure HTML avec <div>
+Voici comment on peut intégrer des <div> dans la structure d'une page : -->
+
+    <div class="container"> <!-- Conteneur principal -->
+        <header>
+            <h1>Bienvenue sur Mon Site Web</h1>
+            <p>Une courte description du site.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="content"> <!-- Contenu principal -->
+                <section id="accueil">
+                    <h2>Accueil</h2>
+                    <p>Ceci est la section d'accueil de mon site.</p>
+                </section>
+
+                <section id="services">
+                    <h2>Nos Services</h2>
+                    <p>Voici une description de nos services.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>Contactez-nous</h2>
+                    <form>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
+                        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Pourquoi utiliser <div> ?
+                Organisation : Les <div> permettent de regrouper des sections de contenu, ce qui facilite la gestion du style et des mises en page.
+                Styles CSS : Tu peux appliquer des styles ou des classes CSS à un <div> pour changer l'apparence de tout le contenu qu'il contient.
+                Flexibilité : Ils sont utiles pour créer des mises en page complexes en utilisant des techniques comme le modèle de boîte (box model) ou le flexbox.
+                Conclusion -->
+    
+
+</body>
+</html>

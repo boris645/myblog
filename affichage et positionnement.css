@@ -1,0 +1,308 @@
+/*
+1. L'AFFICHAGE EN CSS (display)
+
+
+La propriété display en CSS contrôle le type d'affichage d'un élément dans la mise en page.
+ Elle définit comment un élément est représenté sur la page et comment il interagit avec les autres éléments. Voici les principales valeurs de display :
+
+
+
+
+1.1. Valeurs de la propriété display
+
+block :
+
+Un élément avec display: block occupe toute la largeur disponible et commence sur une nouvelle ligne.
+Les éléments de type bloc (comme <div>, <p>, <h1>, etc.) sont des éléments de type bloc par défaut.
+
+
+
+*/
+
+div {
+    display: block;
+  }
+
+  
+/* 
+
+inline :
+
+
+Un élément avec display: inline ne commence pas sur une nouvelle ligne et occupe seulement l'espace nécessaire pour son contenu.
+ Les éléments de type inline sont des éléments qui se trouvent généralement à l'intérieur de blocs, comme <span>, <a>, etc.
+
+*/
+
+span {
+    display: inline;
+  }
+
+
+/*
+
+inline-block :
+
+
+Un élément avec display: inline-block se comporte comme un élément inline (il ne commence pas sur une nouvelle ligne),
+ mais il peut avoir des propriétés de bloc (comme les padding, margin, width, et height).
+
+*/
+
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+
+  /*
+  flex :
+
+
+Un élément avec display: flex devient un conteneur flexible.
+Les éléments enfants de ce conteneur sont disposés selon les règles du modèle Flexbox, permettant un agencement fluide et dynamique.
+  
+  
+*/
+
+.container {
+    display: flex;
+}
+  
+
+/*
+grid :
+
+Un élément avec display: grid devient un conteneur de type grille.
+Ses enfants seront organisés en lignes et colonnes, permettant un contrôle précis de la mise en page.
+
+*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  /*
+  none :
+
+Un élément avec display: none est complètement retiré de la mise en page, il ne prend pas de place et n'affecte pas le flux du document.
+  
+  
+  */
+
+
+  .hidden {
+    display: none;
+  }
+
+  
+  /*
+  2. Le POSITIONNEMENT EN CSS (position)
+  
+  
+  
+  
+  
+  
+La propriété position contrôle la façon dont un élément est positionné par rapport à son parent ou au flux normal du document.
+Elle peut être combinée avec d'autres propriétés comme top, right, bottom, et left pour un contrôle plus précis.
+  
+  
+
+
+
+2.1. Valeurs de la propriété position
+
+static (valeur par défaut) :
+Les éléments positionnés avec position: static suivent le flux normal du document. Ils ne peuvent pas être déplacés avec les propriétés top, left, right, ou bottom.
+*/
+
+div {
+    position: static;
+  }
+
+  /*
+  
+  relative :
+
+
+Un élément avec position: relative est positionné par rapport à sa position normale dans le flux du document.
+Cela signifie que vous pouvez utiliser les propriétés top, right, bottom, et left pour déplacer l'élément sans perturber les autres éléments autour de lui.
+  
+  
+  */
+
+
+  .box {
+    position: relative;
+    top: 20px;
+    left: 30px;
+  }
+
+  /*
+  absolute :
+Un élément avec position: absolute est positionné par rapport à son premier parent avec une position différente de static.
+ Si aucun parent n'a de position spécifique, il sera positionné par rapport au <html> ou au <body>.
+ L'élément est retiré du flux normal du document, ce qui signifie qu'il ne prend pas de place dans la mise en page.
+  
+
+  */
+
+  .box {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+
+/*
+fixed :
+
+
+Un élément avec position: fixed est positionné par rapport à la fenêtre du navigateur.
+Cela signifie que l'élément reste en place même lorsque l'utilisateur fait défiler la page.
+Il est aussi retiré du flux normal du document.
+
+
+*/
+
+.box {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  /*
+  sticky :
+Un élément avec position: sticky est traité comme un élément relative jusqu'à ce qu'il atteigne un certain seuil de défilement, où il devient fixed.
+ Cela est souvent utilisé pour des éléments comme des en-têtes qui restent visibles lorsqu'on fait défiler la page.
+  
+
+  */
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  
+/*
+3. PROPRIETES SUPPLEMENTAIRES LIEES AU POSITIONNEMENT :
+
+
+
+
+
+z-index :
+Le z-index détermine l'ordre de superposition des éléments. Plus la valeur de z-index est élevée,
+ plus l'élément sera au premier plan. Cette propriété fonctionne uniquement sur des éléments ayant une position différente de static.
+
+*/
+
+.box1 {
+    position: absolute;
+    z-index: 1;
+  }
+  .box2 {
+    position: absolute;
+    z-index: 2;
+  }
+
+/*
+
+top, right, bottom, left :
+Ces propriétés sont utilisées en combinaison avec les valeurs relative, absolute, fixed, et sticky pour définir la position exacte de l'élément.
+Elles permettent de décaler un élément de son point de référence.
+
+*/
+
+.box {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+
+  
+  /*
+  4. EXEMPLES PRATIQUES
+  
+  Exemple 1 : Utilisation de Flexbox
+  
+  */
+
+  /*
+  <div class="container">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<style>
+*/
+  .container {
+    display: flex;
+    justify-content: space-between;/*Dans cet exemple, les éléments à l'intérieur de .container sont alignés horizontalement avec des espaces entre eux grâce à flex.*/
+  }
+
+  .item {
+    background-color: #ddd;
+    padding: 10px;
+  }
+  /*
+</style>
+
+*/
+
+/* Exemple 2 : Positionnement absolu */
+
+/*
+<div class="parent">
+  <div class="child">I am absolute!</div>
+</div>
+
+<style>
+*/
+  .parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+  }
+
+  .child {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: lightcoral;
+    padding: 10px;
+  }
+  /*
+</style>
+*/
+
+/*
+Conclusion
+Le positionnement et l'affichage sont deux concepts clés pour le contrôle de la mise en page en CSS.
+ Tandis que display définit comment un élément se comporte dans la structure de la page,
+  position détermine comment il est situé dans le contexte de la page ou de ses éléments parents.
+
+Ces deux propriétés permettent une flexibilité et un contrôle total pour créer des mises en page complexes, fluides et adaptables.
+
+N'hésite pas à expérimenter avec ces propriétés pour comprendre leur fonctionnement en pratique et en situation réelle !
+
+
+
+
+
+*/
+
+  
+  
+  
+  
+  
+
+  

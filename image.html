@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Pour intégrer des images en HTML, tu utilises la balise <img>
+     src : Spécifie l'URL de l'image. Cela peut être un chemin relatif (par exemple, images/photo.jpg)
+      ou un lien absolu (par exemple, https://www.example.com/photo.jpg).
+     alt : Fournit une description de l'image pour l'accessibilité et s'affiche si l'image ne peut pas être chargée.
+    -->
+    <img src="URL_de_l_image" alt="Texte alternatif" />
+
+    <!--  1- Image locale : -->
+
+    <img src="images/photo.jpg" alt="Une belle photo" />
+
+    <!-- 2- Image à partir d'un lien :  -->
+    <img src="https://www.example.com/photo.jpg" alt="Une photo en ligne" />
+
+    <!-- Attributs supplémentaires
+    width et height : Tu peux spécifier la largeur et la hauteur de l'image (en pixels ou en pourcentage) : -->
+    <img src="images/photo.jpg" alt="Une belle photo" width="300" height="200" />
+
+    <!-- title : Affiche un texte lorsque l'utilisateur survole l'image :  -->
+    <img src="images/photo.jpg" alt="Une belle photo" title="Survoler pour plus d'infos" />
+
+    <!-- Styles CSSTu peux également styliser les images avec CSS pour contrôler leur présentation : -->
+    <img src="images/photo.jpg" alt="Une belle photo" style="border: 2px solid #000; border-radius: 8px;" />
+
+    <!-- Responsive Design Pour rendre une image responsive, tu peux utiliser CSS : -->
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    <!-- Exemple complet Voici un exemple de page HTML intégrant une image : -->
+
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <h1>Bienvenue sur ma page</h1>
+    <img src="images/photo.jpg" alt="Une belle photo" title="Survoler pour plus d'infos" />
+
+    <!-- 1- Utilisation de <figure> et <figcaption>
+        <figure> : Ce balise est utilisée pour encapsuler une image (ou d'autres contenus) et une légende (caption) associée.
+        <figcaption> : C'est une balise utilisée à l'intérieur de <figure> pour ajouter une légende à l'image. -->
+
+            <figure>
+                <img src="images/photo.jpg" alt="Une belle photo" />
+                <figcaption>Voici une légende pour l'image.</figcaption>
+            </figure>
+   
+</body>
+</html>

@@ -1,0 +1,100 @@
+TD/TP 1
+1. Expliquer clairement les étapes pour s'abonner au service de notifications Twilio et envoyer avec succès des notifications SMS à d'autres numéros de téléphone.
+Étapes à suivre pour s'abonner au service de notifications Twilio et envoyer des SMS :
+
+Créer un compte Twilio :
+
+Allez sur Twilio et inscrivez-vous.
+Une fois inscrit, vous recevrez un SID de compte (Account SID) et un jeton d'authentification (Auth Token). Ces informations sont nécessaires pour vous connecter à l'API Twilio.
+Obtenir un numéro Twilio :
+
+Dans le tableau de bord Twilio, vous pouvez acheter un numéro de téléphone qui pourra envoyer des SMS.
+Ce numéro sera utilisé comme l'expéditeur des SMS.
+Installer la bibliothèque Twilio :
+
+Pour interagir avec l'API Twilio, vous devez installer la bibliothèque Python officielle. Vous pouvez l'installer avec la commande suivante :
+bash
+Copier le code
+pip install twilio
+Écrire le code source pour envoyer un SMS :
+
+Voici un exemple de code Python qui envoie un SMS en utilisant l'API Twilio :
+python
+Copier le code
+from twilio.rest import Client
+
+# Vos informations Twilio
+account_sid = 'your_account_sid'  # Remplacez par votre SID de compte Twilio
+auth_token = 'your_auth_token'    # Remplacez par votre jeton d'authentification Twilio
+
+# Créez une instance du client Twilio
+client = Client(account_sid, auth_token)
+
+# Paramètres du message
+from_number = '+1234567890'  # Remplacez par votre numéro Twilio
+to_number = '+0987654321'    # Remplacez par le numéro du destinataire
+message_body = 'Bonjour, ceci est un message de test envoyé via Twilio.'
+
+# Envoi du message
+message = client.messages.create(
+    body=message_body,
+    from_=from_number,
+    to=to_number
+)
+
+print(f"Message envoyé avec SID : {message.sid}")
+Explication des variables importantes :
+
+account_sid : Identifiant unique de votre compte Twilio.
+auth_token : Jeton d'authentification pour accéder à votre compte Twilio.
+from_number : Le numéro Twilio d'où sera envoyé le message.
+to_number : Le numéro du destinataire du SMS.
+message_body : Le contenu du message à envoyer.
+Dépendances :
+
+twilio : La bibliothèque Python pour interagir avec l'API Twilio.
+2. Trois approches de modélisation et leur contribution à la modélisation d'une infrastructure complexe.
+Modélisation Entité-Relation (ER) :
+
+Description : Cette approche est utilisée pour représenter les relations entre différentes entités dans un système, comme les utilisateurs, les objets et leurs interactions.
+Contribution : Elle aide à clarifier la structure des données et à garantir une bonne gestion des relations complexes entre les différentes entités d'une infrastructure.
+Exemple : Dans un système de gestion de rendez-vous, un diagramme ER pourrait représenter les entités telles que "Utilisateur", "Rendez-vous", et les relations entre elles, par exemple, "Un utilisateur peut avoir plusieurs rendez-vous".
+Modélisation UML (Unified Modeling Language) :
+
+Description : UML est une approche standardisée pour visualiser, spécifier, construire et documenter les composants d'un système logiciel. Elle inclut des diagrammes comme les diagrammes de classes, de séquence et d'activité.
+Contribution : UML permet de représenter de manière visuelle et structurée les composants du système, ce qui facilite la compréhension de l'architecture du système et la communication entre les développeurs et les parties prenantes.
+Exemple : Un diagramme de classes peut représenter les objets du système (par exemple, "Utilisateur", "Rendez-vous") et leurs relations (par exemple, une relation "possède").
+Modélisation basée sur les flux de données (DFD) :
+
+Description : Un DFD représente les flux de données dans un système, montrant comment les informations circulent entre les entités, les processus et les systèmes externes.
+Contribution : Elle aide à comprendre comment les données se déplacent dans l'infrastructure et comment elles sont transformées ou utilisées dans les processus, ce qui est essentiel pour concevoir des systèmes complexes où l'intégrité des données est cruciale.
+Exemple : Un DFD pour un système de gestion de rendez-vous pourrait montrer comment les données des utilisateurs (par exemple, les informations de contact) sont envoyées à un système de base de données, puis utilisées pour planifier des rendez-vous.
+3. Différence entre le document de spécifications des exigences logicielles (SRS) et le document de conception du système (SDD).
+SRS (Software Requirements Specification) : Ce document décrit en détail les exigences fonctionnelles et non fonctionnelles d'un système. Il inclut les besoins des utilisateurs, les contraintes techniques, les performances et les objectifs du système, ainsi que les conditions de validation et de vérification. Le SRS ne spécifie pas comment les exigences seront implémentées, mais ce qui doit être accompli.
+
+SDD (System Design Document) : Ce document décrit la manière dont le système sera conçu pour répondre aux exigences spécifiées dans le SRS. Il inclut l'architecture du système, les diagrammes UML, les choix techniques, les composants du système, ainsi que les interfaces entre ces composants. Le SDD est donc plus centré sur la mise en œuvre technique.
+
+4. Deux raisons pour lesquelles un diagramme de classes est considéré comme le diagramme UML le plus important.
+Modélisation des structures statiques :
+
+Le diagramme de classes permet de représenter la structure statique du système en définissant les objets (ou classes) et leurs relations, ce qui est fondamental pour comprendre l'architecture du système. C'est la base pour la conception de l'ensemble du système.
+Précision des responsabilités et des relations :
+
+Le diagramme de classes permet de préciser les responsabilités de chaque classe, les attributs et méthodes qui leur sont associés, ainsi que les relations entre les classes (par exemple, héritage, association). Cela rend le code plus compréhensible et plus facile à maintenir.
+TD/TP 2: Project : Appointment Reminder System
+Phase 1 : Système d'authentification à deux facteurs (2FA)
+Objectif : Mettre en place un système 2FA simple en utilisant Twilio pour l'authentification des utilisateurs du système de rappel de rendez-vous.
+
+Fonctionnalités :
+
+Les utilisateurs se connectent avec leur nom d'utilisateur et leur mot de passe.
+Un code est envoyé au téléphone de l'utilisateur via SMS avec un mot de passe à usage unique (OTP).
+L'utilisateur doit saisir l'OTP pour compléter le processus d'authentification.
+Envoi du message avec l'API Twilio : Le même code montré précédemment pour envoyer un SMS peut être utilisé pour envoyer un OTP au numéro de téléphone de l'utilisateur après avoir validé son mot de passe.
+
+Phase 2 : Rappels de rendez-vous et gestion par SMS
+Objectif : Le système doit envoyer un rappel SMS 30 minutes avant l'heure du rendez-vous.
+Utiliser un service comme Twilio pour envoyer des messages automatiques.
+Fonctionnalités supplémentaires :
+Permettre à l'utilisateur d'annuler ou de reprogrammer ses rendez-vous par SMS.
+Cette fonctionnalité nécessitera probablement la gestion de messages entrants et un traitement côté serveur pour interpréter ces messages (par exemple, un message contenant "Annuler" ou "Reprogrammer").

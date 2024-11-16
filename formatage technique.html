@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        La balise <code> en HTML est utilisée pour représenter du texte qui est du code informatique.
+        Elle permet d afficher des éléments de code
+
+        La balise <kbd> en HTML est utilisée pour représenter du texte qui doit être entré par l'utilisateur,
+         comme des commandes de clavier ou des entrées de texte
+
+         La balise <meter> en HTML est utilisée pour représenter une mesure quantitative dans un intervalle connu,
+        comme des niveaux, des quantités ou des performances
+
+        <meter> : value(valeur)
+                  min(valeur minimal)
+                  max(valeur maximale)
+                  hight(seuil lorsque la valeur devient haute)
+                  low(seuil lorsque la valeur devient basse)
+                  optimum(seuil lorsque la valeur est optimale)
+        
+        La balise <output> en HTML est utilisée pour représenter le résultat d'un calcul ou d'une action dans une application web. Elle est souvent utilisée en conjonction avec des formulaires et des scripts pour afficher des valeurs calculées ou des résultats d'entrée de l'utilisateur.
+            
+        La balise <pre> en HTML est utilisée pour afficher du texte préformaté. Elle conserve les espaces, les retours à la ligne et la mise en forme originale du contenu. Cela est particulièrement utile pour afficher du code, des poèmes ou tout autre texte où la présentation est importante.
+    
+        La balise <ruby> en HTML est utilisée pour créer des annotations phonétiques ou des traductions pour des caractères, principalement dans les textes en langues asiatiques comme le japonais ou le chinois. Elle permet d'afficher des caractères d'annotation (appelés "ruby") au-dessus ou à côté des caractères principaux, facilitant ainsi la lecture et la compréhension.
+
+        -->
+
+        
+
+    <p>dire bonjour : <code>printf("hello world")</code></p>
+
+    <p>enregistrer le document avec le raccourci <kbd>ctrl + s</kbd></p>
+
+    <p>valeur en poucentage : <meter value="0.25">25%</meter></p>
+
+    <p>valeur en poucentage : <meter value="37" optimum="37.4">25%</meter>37 degrés</p>
+
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" value="0"> +
+        <input type="number" id="b" value="0"> =
+        <output name="result" id="result">0</output>
+    </form>
+
+    <pre>
+        function helloWorld() {
+            console.log("Hello, world!");
+        }
+    </pre>
+
+    <ruby>
+        漢字<rt>かんじ</rt>
+    </ruby>
+
+   
+        <ruby>
+            あ<rt>A</rt>
+            りが<rt>RI</rt>
+            と<rt>GA</rt>
+            う<rt>TO</rt>
+        </ruby>
+   
+    <ruby>ありがとう<rt>arigato</rt><rp>(</rp><rt>arigato</rt><rp>)</rp></ruby>
+
+        <!--balise pour produir un résultat-->
+
+        <p>ce code : <code>printf("hello word");</code></p>
+        <p>va afficher => <samp>hello word</samp></p>
+
+        <!--balise pour le temps-->
+        <p>Début de janvier 2024 <time datetime="2024-01-25 13:25:04">25 janvier 2024</time></p>
+
+        <!--balise pour les variable-->
+        <p>La formule de la zone d'un cercle est <var>A</var> = π × <var>r</var>², où <var>r</var> est le rayon.</p>
+
+
+</body>
+</html>

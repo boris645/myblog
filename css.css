@@ -1,0 +1,151 @@
+/*
+
+Introduction au CSS (Cascading Style Sheets)
+CSS, ou Cascading Style Sheets, est un langage de style utilisé pour décrire la présentation d’un document écrit en HTML ou en XML.
+ Il permet de contrôler l'apparence visuelle des pages web, y compris la mise en page, les couleurs, les polices, et bien plus encore.
+ CSS joue un rôle essentiel dans le développement web moderne, permettant de créer des interfaces attrayantes et fonctionnelles.
+
+*/
+
+/*
+
+1. Qu'est-ce que le CSS ?
+CSS a été développé pour permettre une séparation claire entre le contenu (HTML) et la présentation (CSS).
+ Cela facilite la maintenance des sites web, car les modifications de style peuvent être effectuées sans toucher au contenu. Voici quelques avantages du CSS :
+
+Séparation du contenu et de la présentation : Facilite la gestion et la mise à jour des sites web.
+Contrôle du design : Permet d'appliquer des styles globaux à plusieurs pages à partir d'un seul fichier CSS.
+Responsive Design : Aide à créer des sites qui s'adaptent à différentes tailles d'écran et appareils.
+Animations et transitions : Ajoute des effets visuels qui améliorent l'expérience utilisateur.
+
+*/
+
+/*
+2. Syntaxe de base du CSS
+La syntaxe CSS est simple et se compose de sélecteurs et de déclarations. Un style CSS est écrit sous la forme suivante :
+*/
+
+sélecteur {
+    propriété: valeur;
+}
+
+/*
+
+Bien sûr ! Voici une introduction complète au langage CSS.
+
+Introduction au CSS (Cascading Style Sheets)
+CSS, ou Cascading Style Sheets, est un langage de style utilisé pour décrire la présentation d’un document écrit en HTML ou en XML. Il permet de contrôler l'apparence visuelle des pages web, y compris la mise en page, les couleurs, les polices, et bien plus encore. CSS joue un rôle essentiel dans le développement web moderne, permettant de créer des interfaces attrayantes et fonctionnelles.
+
+1. Qu'est-ce que le CSS ?
+CSS a été développé pour permettre une séparation claire entre le contenu (HTML) et la présentation (CSS). Cela facilite la maintenance des sites web, car les modifications de style peuvent être effectuées sans toucher au contenu. Voici quelques avantages du CSS :
+
+Séparation du contenu et de la présentation : Facilite la gestion et la mise à jour des sites web.
+Contrôle du design : Permet d'appliquer des styles globaux à plusieurs pages à partir d'un seul fichier CSS.
+Responsive Design : Aide à créer des sites qui s'adaptent à différentes tailles d'écran et appareils.
+Animations et transitions : Ajoute des effets visuels qui améliorent l'expérience utilisateur.
+2. Syntaxe de base du CSS
+La syntaxe CSS est simple et se compose de sélecteurs et de déclarations. Un style CSS est écrit sous la forme suivante :
+
+css
+Copier le code
+sélecteur {
+    propriété: valeur;
+}
+
+Exemple :
+*/
+
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+/*
+Dans cet exemple, le sélecteur h1 cible tous les éléments <h1> dans le document,
+ et les propriétés color et font-size définissent respectivement la couleur et la taille de la police.
+
+*/
+
+/*
+
+3. Types de sélecteurs CSS
+Il existe plusieurs types de sélecteurs CSS :
+
+Sélecteurs de type : Ciblent tous les éléments d’un type spécifique (ex. p, h1).
+Sélecteurs de classe : Ciblent les éléments ayant une classe spécifique, en utilisant un point (.). Par exemple, .ma-classe { color: red; }.
+Sélecteurs d'identifiant : Ciblent un élément ayant un identifiant unique, en utilisant un dièse (#). Par exemple, #mon-id { font-size: 20px; }.
+Sélecteurs de descendant : Ciblent un élément en fonction de sa hiérarchie dans le document (ex. div p cible tous les <p> à l'intérieur des <div>).
+
+*/
+
+
+
+/*
+
+4. Propriétés CSS courantes
+Voici quelques propriétés CSS fréquemment utilisées :
+
+Couleur et arrière-plan :
+
+color: définit la couleur du texte.
+background-color: définit la couleur d’arrière-plan d’un élément.
+Polices :
+
+font-family: définit la police de caractère.
+font-size: définit la taille de la police.
+font-weight: définit l'épaisseur de la police.
+Mise en page :
+
+margin: définit l'espace autour d'un élément.
+padding: définit l'espace à l'intérieur d'un élément.
+border: définit la bordure autour d'un élément.
+Affichage et positionnement :
+
+display: définit le modèle d'affichage (block, inline, flex, grid).
+position: définit le mode de positionnement (static, relative, absolute, fixed).
+
+*/
+
+/*
+5. Comment intégrer le CSS
+Il existe plusieurs façons d’intégrer du CSS dans un document HTML :
+
+Fichier externe : En liant un fichier CSS à votre document HTML avec une balise <link> dans la section <head>.
+
+*/
+
+<link rel="stylesheet" href="styles.css">
+
+/*
+Style interne : En utilisant une balise <style> dans la section <head>.
+*/
+
+<style>
+    body { background-color: #f0f0f0; }
+</style>
+
+/*
+Style en ligne : En ajoutant un attribut style directement sur un élément HTML.
+*/
+
+<h1 style="color: blue;">Titre en bleu</h1>
+
+/*
+6. Responsive Design
+Le CSS joue un rôle crucial dans le responsive design,
+ qui consiste à adapter la mise en page d'un site web en fonction de la taille de l'écran.
+  Vous pouvez utiliser des media queries pour appliquer différents styles selon les caractéristiques de l’appareil.
+
+Exemple de media query :
+*/
+
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+/*
+Cette règle changera la couleur d'arrière-plan en bleu clair si la largeur de l’écran est inférieure ou égale à 600 pixels.
+*/
+

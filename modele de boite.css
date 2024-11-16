@@ -1,0 +1,177 @@
+/*
+1. Modèle en boîte en HTML (HTML Box Model)
+
+
+
+
+
+En HTML, le modèle en boîte est un concept qui décrit la structure de chaque élément sur une page web. Chaque élément HTML est représenté sous forme de boîte rectangulaire, avec des parties distinctes qui définissent l'apparence et le comportement de l'élément. Ces parties sont :
+
+Content : Le contenu de l'élément (texte, images, etc.).
+Padding : L'espace entre le contenu de l'élément et sa bordure. Cela crée un "vide" autour du contenu.
+Border : La bordure de l'élément, qui peut être stylée (épaisseur, couleur, type).
+Margin : L'espace entre l'élément et ses voisins. Cela sépare les éléments entre eux.
+
+*/
+
+
+
+/*
+Illustration de la structure du modèle en boîte :
+
+
+
++-------------------------+
+|        Margin            |
+|  +-------------------+   |
+|  |     Border        |   |
+|  |  +-------------+  |   |
+|  |  |  Padding    |  |   |
+|  |  |  +-------+  |  |   |
+|  |  |  |Content |  |  |   |
+|  |  |  +-------+  |  |   |
+|  |  +-------------+  |   |
+|  +-------------------+   |
++-------------------------+
+
+*/
+
+
+
+
+/*2. Modèle en boîte en CSS (CSS Box Model)
+
+
+
+
+
+
+
+Le modèle en boîte CSS est basé sur la même idée, mais c'est à travers les propriétés CSS que vous pouvez manipuler ces boîtes.
+Les propriétés qui influencent ce modèle sont :
+
+a) Propriétés CSS liées au modèle en boîte :
+width et height : Définissent la taille du contenu de la boîte.
+padding : Espace autour du contenu, mais à l'intérieur de la bordure.
+border : Définit la bordure de l'élément (epaisseur, style, couleur).
+margin : Espacement autour de l'élément, à l'extérieur de la bordure.
+*/
+
+
+/* b) Exemple de code CSS : */
+
+/*
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modèle en Boîte</title>
+  <style>
+  */
+    .boite {
+      width: 300px;
+      height: 200px;
+      padding: 20px;
+      border: 5px solid black;
+      margin: 30px;
+      background-color: lightblue;
+    }
+    /*
+  </style>
+</head>
+<body>
+
+  <div class="boite">
+    Contenu ici !
+  </div>
+
+</body>
+</html>
+*/
+
+/* 3. Définition détaillée des propriétés :
+
+
+
+
+
+
+
+width et height : Ce sont les dimensions de l'élément, mais ces valeurs ne tiennent pas compte des marges, bordures et remplissages par défaut.
+
+padding : Cette propriété ajoute de l'espace à l'intérieur de la boîte, entre le contenu et la bordure.
+
+border : Cette propriété définit l'apparence de la bordure autour de l'élément. Elle peut être personnalisée en termes de couleur,
+d'épaisseur et de style (solide, pointillé, etc.).
+
+margin : Cette propriété permet de créer un espacement autour de l'élément, en dehors de la bordure.
+
+*/
+
+/* c) Comportement de la largeur (box-sizing)
+
+
+
+
+Par défaut, la propriété box-sizing est définie à content-box, ce qui signifie que la largeur et la hauteur définies ne prennent en compte que le contenu de l'élément,
+sans inclure le padding, la bordure et la marge. Cependant,
+si vous voulez que la largeur inclut aussi le padding et la bordure, vous pouvez définir box-sizing à border-box :
+
+*/
+
+* {
+    box-sizing: border-box;
+  }
+
+  /*4. Exemple avec box-sizing: border-box*/
+
+  /*
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple Box-Sizing</title>
+  <style>
+  */
+    * {
+      box-sizing: border-box;
+    }
+
+    .boite {
+      width: 300px;
+      padding: 20px;
+      border: 5px solid black;
+      margin: 30px;
+      background-color: lightgreen;
+    }
+    /*
+  </style>
+</head>
+<body>
+
+  <div class="boite">
+    Contenu avec box-sizing: border-box
+  </div>
+
+</body>
+</html
+*/
+
+/* 
+Dans cet exemple, la largeur de la boîte reste toujours de 300px, même si le padding et la bordure sont ajoutés.
+
+
+
+5. Conclusion :
+Le modèle en boîte CSS est essentiel pour la mise en page des éléments sur une page web. En comprenant comment les différentes propriétés de la boîte interagissent (contenu, padding, bordure et marge),
+vous pouvez mieux contrôler la disposition des éléments et l'espacement entre eux.
+De plus, l'utilisation de box-sizing: border-box simplifie souvent la gestion des dimensions de vos éléments.
+
+
+
+*/
+
+
+

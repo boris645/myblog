@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        tableaux
+
+        Les tableaux en HTML sont utilisés pour organiser et présenter des données de manière structurée sous forme de lignes et de colonnes.
+         Ils sont particulièrement utiles lorsque vous devez afficher des informations tabulaires, comme des statistiques,
+          des horaires, des comparaisons ou des résultats.
+
+        Voici quelques utilisations courantes des tableaux en HTML :
+
+        Affichage de données : Présenter des informations numériques, comme des résultats de recherche ou des bilans financiers.
+        Comparaisons : Mettre en comparaison différentes catégories ou produits.
+        Structuration de contenu : Organiser des contenus, comme des formulaires ou des galeries d'images, en utilisant des lignes et des colonnes.
+
+                Structure du tableau :
+        <table> : définit le tableau.
+        <thead> : contient l'en-tête du tableau.
+        <tr> : définit une ligne.
+        <th> : définit une cellule d'en-tête (souvent en gras).
+        <tbody> : contient le corps du tableau avec les données.
+        <td> : définit une cellule de données.
+        Les tableaux permettent de rendre les données plus compréhensibles et d'améliorer la lisibilité des informations.
+    
+    -->
+
+    <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Plateforme</th>
+            <th>Date de sortie</th>
+            <th>Genre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Legend of Zelda: Breath of the Wild</td>
+            <td>Nintendo Switch</td>
+            <td>3 mars 2017</td>
+            <td>Action-aventure</td>
+          </tr>
+          <tr>
+            <td>The Last of Us Part II</td>
+            <td>PlayStation 4</td>
+            <td>19 juin 2020</td>
+            <td>Action-aventure</td>
+          </tr>
+          <tr>
+            <td>Halo Infinite</td>
+            <td>Xbox Series X/S</td>
+            <td>8 décembre 2021</td>
+            <td>FPS</td>
+          </tr>
+          <tr>
+            <td>Among Us</td>
+            <td>PC, Nintendo Switch, Mobile</td>
+            <td>15 juin 2018</td>
+            <td>Multijoueur</td>
+          </tr>
+          <tr>
+            <td>Cyberpunk 2077</td>
+            <td>PC, PlayStation 4, Xbox One</td>
+            <td>10 décembre 2020</td>
+            <td>RPG</td>
+          </tr>
+        </tbody>
+      </table>
+      
+<!-- 
+      Un tableau à double en-tête est utile pour présenter des données plus complexes, où vous souhaitez structurer les informations sur plusieurs niveaux.
+       Voici un exemple de tableau à double en-tête pour des jeux vidéo, en montrant les plateformes et les genres.
+
+
+       NB:
+
+       Explication :
+Titre : Colonne unique pour le nom du jeu vidéo.
+Plateformes : Deux niveaux d'en-tête, où la première ligne regroupe les colonnes des plateformes (PC, Console, Mobile).
+rowspan et colspan :
+rowspan="2" : fait que la cellule "Titre" s'étend sur deux lignes.
+colspan="3" : fait que la cellule "Plateformes" s'étend sur trois colonnes.
+Ce tableau permet d'organiser les jeux vidéo par titre et de voir sur quelles plateformes ils sont disponibles, tout en gardant une structure claire et lisible.
+ -->
+
+ <table>
+    <thead>
+      <tr>
+        <th rowspan="2">Titre</th>
+        <th colspan="3">Plateformes</th>
+      </tr>
+      <tr>
+        <th>PC</th>
+        <th>Console</th>
+        <th>Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Legend of Zelda: Breath of the Wild</td>
+        <td></td>
+        <td>Nintendo Switch</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>The Last of Us Part II</td>
+        <td></td>
+        <td>PlayStation 4</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Halo Infinite</td>
+        <td></td>
+        <td>Xbox Series X/S</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Among Us</td>
+        <td>PC</td>
+        <td>Switch</td>
+        <td>Mobile</td>
+      </tr>
+      <tr>
+        <td>Cyberpunk 2077</td>
+        <td>PC</td>
+        <td>PlayStation 4, Xbox One</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 
+  
+  Pour appliquer du style aux éléments de votre tableau HTML, vous pouvez utiliser CSS.
+ Voici un exemple qui montre comment styliser le tableau que nous avons créé précédemment :
+
+    NB:
+
+        Explication du style CSS :
+    table : Définit la largeur à 100% et utilise border-collapse pour éviter les espaces entre les bordures.
+    th, td : Définit une bordure, du padding et un alignement à gauche pour les cellules.
+    th : Définit un fond gris clair et une couleur de texte plus sombre pour l'en-tête.
+    tbody tr:nth-child(even) : Applique un fond différent pour les lignes paires, ce qui améliore la lisibilité.
+    tbody tr:hover : Change le fond de la ligne lorsqu'on passe la souris dessus pour une interaction visuelle.
+  
+  -->
+       <!-- 
+   
+            
+        </template>
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 12px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                    color: #333;
+                }
+                tbody tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                }
+                tbody tr:hover {
+                    background-color: #f1f1f1;
+                }
+            </style>
+            
+            -->
+
+        <table>
+        <thead>
+            <tr>
+            <th rowspan="2">Titre</th>
+            <th colspan="3">Plateformes</th>
+            </tr>
+            <tr>
+            <th>PC</th>
+            <th>Console</th>
+            <th>Mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>The Legend of Zelda: Breath of the Wild</td>
+            <td></td>
+            <td>Nintendo Switch</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>The Last of Us Part II</td>
+            <td></td>
+            <td>PlayStation 4</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Halo Infinite</td>
+            <td></td>
+            <td>Xbox Series X/S</td>
+            <td></td>
+            </tr>
+            <tr>
+            <td>Among Us</td>
+            <td>PC</td>
+            <td>Switch</td>
+            <td>Mobile</td>
+            </tr>
+            <tr>
+            <td>Cyberpunk 2077</td>
+            <td>PC</td>
+            <td>PlayStation 4, Xbox One</td>
+            <td></td>
+            </tr>
+        </tbody>
+        </table>
+
+        <!-- 
+             l'attribut border directement dans la balise <table> pour créer des bordures autour
+
+                NB:
+
+                Explication des attributs :
+                border="1" : Ajoute une bordure de largeur 1 autour du tableau et des cellules.
+                cellspacing="0" : Supprime l'espace entre les cellules.
+                cellpadding="5" : Ajoute un espacement de 5 pixels à l'intérieur des cellules pour que le texte ne touche pas les bordures.
+        
+        -->
+
+        <table border="1" cellspacing="0" cellpadding="5">
+            <caption>Listing de jeux video</caption>
+            <thead>
+              <tr>
+                <th rowspan="2">Titre</th>
+                <th colspan="3">Plateformes</th>
+              </tr>
+              <tr>
+                <th>PC</th>
+                <th>Console</th>
+                <th>Mobile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Legend of Zelda: Breath of the Wild</td>
+                <td></td>
+                <td>Nintendo Switch</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>The Last of Us Part II</td>
+                <td></td>
+                <td>PlayStation 4</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Halo Infinite</td>
+                <td></td>
+                <td>Xbox Series X/S</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Among Us</td>
+                <td>PC</td>
+                <td>Switch</td>
+                <td>Mobile</td>
+              </tr>
+              <tr>
+                <td>Cyberpunk 2077</td>
+                <td>PC</td>
+                <td>PlayStation 4, Xbox One</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- 
+            Voici un exemple de tableau à double en-tête en HTML pour définir des abréviations, en utilisant l'attribut abbr dans la balise <th> :
+
+
+                Explication :
+        Attribut abbr : Utilisé dans les balises <th> pour indiquer une abréviation. Par exemple, dans <th abbr="Abbreviation">,
+            "Abbreviation" est l'abréviation pour "Abréviation".
+        Structure : Le tableau a deux niveaux d'en-tête, où le premier niveau indique que les colonnes suivantes décrivent la signification des abréviations.
+        Bordures : Les bordures sont ajoutées avec border="1", et cellspacing et cellpadding gèrent l'espacement.
+          -->
+
+          <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+              <tr>
+                <th rowspan="2" abbr="Abbreviation">Abréviation</th>
+                <th colspan="2" abbr="Meaning">Signification</th>
+              </tr>
+              <tr>
+                <th abbr="French">Français</th>
+                <th abbr="English">Anglais</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML</td>
+                <td>Langage de balisage hypertexte</td>
+                <td>HyperText Markup Language</td>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td>Feuilles de style en cascade</td>
+                <td>Cascading Style Sheets</td>
+              </tr>
+              <tr>
+                <td>JS</td>
+                <td>JavaScript</td>
+                <td>JavaScript</td>
+              </tr>
+              <tr>
+                <td>URL</td>
+                <td>Uniform Resource Locator</td>
+                <td>Uniform Resource Locator</td>
+              </tr>
+              <tr>
+                <td>SEO</td>
+                <td>Optimisation pour les moteurs de recherche</td>
+                <td>Search Engine Optimization</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 
+          tableau avec des identifiants
+
+                    Explication :
+            id dans <th> : Chaque en-tête de colonne a un attribut id unique, comme id="titre" pour le titre et id="pc" pour la plateforme PC.
+                Cela permet de référencer ces en-têtes de manière unique.
+
+            headers dans <td> : Les cellules de données utilisent l'attribut headers pour indiquer à quel en-tête elles se rapportent.
+                Par exemple, headers="titre" relie la cellule à l'en-tête "Titre".
+
+            Cette structure améliore l'accessibilité du tableau, notamment pour les technologies d'assistance,
+            en permettant aux utilisateurs de mieux comprendre les relations entre les cellules et leurs en-têtes.
+          
+          -->
+
+          <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+              <tr>
+                <th id="titre" rowspan="2">Titre</th>
+                <th colspan="3" id="plateformes">Plateformes</th>
+              </tr>
+              <tr>
+                <th id="pc">PC</th>
+                <th id="console">Console</th>
+                <th id="mobile">Mobile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td headers="titre">The Legend of Zelda: Breath of the Wild</td>
+                <td headers="pc"></td>
+                <td headers="console">Nintendo Switch</td>
+                <td headers="mobile"></td>
+              </tr>
+              <tr>
+                <td headers="titre">The Last of Us Part II</td>
+                <td headers="pc"></td>
+                <td headers="console">PlayStation 4</td>
+                <td headers="mobile"></td>
+              </tr>
+              <tr>
+                <td headers="titre">Halo Infinite</td>
+                <td headers="pc"></td>
+                <td headers="console">Xbox Series X/S</td>
+                <td headers="mobile"></td>
+              </tr>
+              <tr>
+                <td headers="titre">Among Us</td>
+                <td headers="pc">PC</td>
+                <td headers="console">Switch</td>
+                <td headers="mobile">Mobile</td>
+              </tr>
+              <tr>
+                <td headers="titre">Cyberpunk 2077</td>
+                <td headers="pc">PC</td>
+                <td headers="console">PlayStation 4, Xbox One</td>
+                <td headers="mobile"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+  
+</body>
+</html>

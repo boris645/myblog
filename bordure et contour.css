@@ -1,0 +1,208 @@
+/*
+1. Bordures en CSS (CSS Borders)
+
+
+
+
+
+
+
+
+Les bordures en CSS sont utilisées pour définir une ligne autour d'un élément. Elles peuvent être personnalisées en termes de couleur, d'épaisseur, de style et de forme.
+
+a) Propriétés des bordures en CSS :
+border : C'est la propriété raccourcie pour définir l'épaisseur, le style et la couleur de la bordure.
+
+Syntaxe : border: [épaisseur] [style] [couleur];
+Exemple : border: 2px solid red;
+border-width : Définit l'épaisseur de la bordure.
+
+Exemple : border-width: 3px;
+border-style : Définit le style de la bordure (solid, dotted, dashed, double, etc.).
+
+Exemple : border-style: solid;
+border-color : Définit la couleur de la bordure.
+
+Exemple : border-color: blue;
+*/
+
+/*
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bordures CSS</title>
+  <style*/
+    .bordure-1 {
+      border: 2px solid red;
+    }
+
+    .bordure-2 {
+      border-width: 5px;
+      border-style: dashed;
+      border-color: green;
+    }
+
+    .bordure-3 {
+      border: 3px double blue;
+    }
+
+    .bordure-4 {
+      border-top: 5px solid black;
+      border-right: 2px dashed yellow;
+    }
+    /*
+  </style>
+</head>
+<body>
+
+  <div class="bordure-1">Bordure solide rouge</div>
+  <div class="bordure-2">Bordure en pointillé verte</div>
+  <div class="bordure-3">Bordure double bleue</div>
+  <div class="bordure-4">Bordures différentes (haut et droite)</div>
+
+</body>
+</html>
+*/
+
+/*
+c) Propriétés individuelles des bordures :
+
+Vous pouvez spécifier chaque côté de la bordure séparément :
+
+
+border-top, border-right, border-bottom, border-left : Permet de définir la bordure pour chaque côté de l'élément.
+Exemple : border-top: 4px solid black;
+
+
+*/
+
+/*
+d) Arrondir les coins des bordures :
+
+
+
+
+border-radius : Cette propriété permet de rendre les coins d'un élément arrondis.
+Exemple : border-radius: 10px; (tous les coins arrondis)
+Vous pouvez également spécifier des valeurs différentes pour chaque coin : border-radius: 10px 20px 30px 40px;
+
+*/
+
+.bordure-arrondie {
+    border: 5px solid black;
+    border-radius: 15px;
+  }
+
+  
+  /*
+  2. CONTOURS EN CSS (CSS Outlines)
+
+
+
+Les contours en CSS sont similaires aux bordures, mais ils ont quelques différences importantes :
+
+Le contour ne prend pas de place dans le flux du document, il n'affecte pas la disposition des autres éléments.
+Il peut être appliqué à tous les côtés de l'élément simultanément, sans affecter sa taille réelle.
+Le contour est souvent utilisé pour des effets visuels comme des surlignages.
+  
+  
+  
+  a) Propriétés des contours :
+outline : C'est une propriété raccourcie pour définir la couleur, l'épaisseur et le style du contour.
+
+Exemple : outline: 2px solid red;
+outline-width : Définit l'épaisseur du contour.
+
+Exemple : outline-width: 3px;
+outline-style : Définit le style du contour (solid, dotted, dashed, etc.).
+
+Exemple : outline-style: dotted;
+outline-color : Définit la couleur du contour.
+
+Exemple : outline-color: blue;
+
+
+
+
+
+b) Exemples d'utilisation des contours :
+*/
+
+/*
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contours CSS</title>
+  <style>
+  */
+    .contour-1 {
+      outline: 2px solid red;
+    }
+
+    .contour-2 {
+      outline-width: 5px;
+      outline-style: dotted;
+      outline-color: green;
+    }
+
+    .contour-3 {
+      outline: 3px double blue;
+    }
+
+    .contour-4 {
+      outline: 3px solid black;
+      outline-offset: 10px;
+    }
+    /*
+  </style>
+</head>
+<body>
+
+  <div class="contour-1">Contour solide rouge</div>
+  <div class="contour-2">Contour pointillé vert</div>
+  <div class="contour-3">Contour double bleu</div>
+  <div class="contour-4">Contour avec décalage</div>
+
+</body>
+</html>
+*/
+
+/*
+c) Décalage du contour avec outline-offset :
+
+
+
+
+outline-offset : Permet de déplacer le contour par rapport à l'élément. Cela crée un espace entre l'élément et le contour.
+Exemple : outline-offset: 5px;
+
+
+3. Différences entre bordures et contours :
+Propriété           	Bordure (Border)            	                 Contour (Outline)
+Prend de la place   	Oui, modifie le flux du document	                Non, ne prend pas de place dans le flux
+Position	            Toujours autour de l'élément	                    Toujours en dehors de l'élément
+Arrondir les coins	    Oui, avec border-radius	                            Non (les coins sont carrés)
+Utilisation principale	Définir les limites visibles de l'élément	        Surligner l'élément (ex. focus)
+
+
+
+
+*/
+
+/*
+4. Conclusion
+
+
+
+
+Les bordures sont utilisées pour dessiner une ligne autour d'un élément et font partie de la taille de l'élément, affectant son espacement.
+Les contours sont utilisés principalement pour des effets visuels (ex. surlignage) et n'affectent pas la mise en page de l'élément.
+
+
+
+*/
+
